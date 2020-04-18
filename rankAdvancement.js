@@ -41,6 +41,7 @@ class ScoutbookRankAdvancement {
             "2016" : new LifeRank2016(),
         },
         "Eagle Scout": {
+            "2014" : new EagleRank2016(), // there are no real Eagle 2014s, just version error.
             "2016" : new EagleRank2016(),
         }
     };
