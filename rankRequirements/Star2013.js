@@ -4,7 +4,7 @@ const ScoutbookRequirement = require('../requirement');
 
 class StarRank2013 extends ScoutbookRankRequirement {
     constructor() {
-        super('Star Scout', 2013, StarRank2016.buildRequirements());
+        super('Star Scout', 2013, StarRank2013.buildRequirements());
     }
 
     static buildRequirements() {
