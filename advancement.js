@@ -1,5 +1,5 @@
 "use strict";
-const ScoutbookRankRequirement = require('./rankRequirement');
+const ScoutbookRankAdvancement = require('./rankAdvancement');
 
 class ScoutbookAdvancement {
     static supportedRanks = [
@@ -14,7 +14,7 @@ class ScoutbookAdvancement {
     constructor() {
     }
     set Scout(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Scout') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Scout') {
             this.scout = value;
         }
     }
@@ -23,7 +23,7 @@ class ScoutbookAdvancement {
     }
 
     set Tenderfoot(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Tenderfoot') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Tenderfoot') {
             this.tenderfoot = value;
         }
     }
@@ -31,7 +31,7 @@ class ScoutbookAdvancement {
         return this.tenderfoot;
     }
     set SecondClass(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Second Class') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Second Class') {
             this.secondClass = value;
         }
     }
@@ -39,7 +39,7 @@ class ScoutbookAdvancement {
         return this.secondClass;
     }
     set FirstClass(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'First Class') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'First Class') {
             this.firstClass = value;
         }
     }
@@ -47,7 +47,7 @@ class ScoutbookAdvancement {
         return this.firstClass;
     }
     set StarScout(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Star Scout') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Star Scout') {
             this.starScout = value;
         }
     }
@@ -55,7 +55,7 @@ class ScoutbookAdvancement {
         return this.starScout;
     }
     set LifeScout(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Life Scout') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Life Scout') {
             this.lifeScout = value;
         }
     }
@@ -63,7 +63,7 @@ class ScoutbookAdvancement {
         return this.lifeScout;
     }
     set EagleScout(value){
-        if (value instanceof ScoutbookRankRequirement && value.rank === 'Eagle Scout') {
+        if (value instanceof ScoutbookRankAdvancement && value.rank === 'Eagle Scout') {
             this.eagleScout = value;
         }
     }
