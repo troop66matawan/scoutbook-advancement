@@ -1,5 +1,5 @@
 "use strict";
-const ScoutbookRankRequirement = require('rankRequirement');
+const ScoutbookRankRequirement = require('./rankRequirement');
 
 class ScoutbookAdvancement {
     static supportedRanks = [
