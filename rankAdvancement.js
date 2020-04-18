@@ -1,18 +1,18 @@
 "use strict";
 
-const ScoutRank2016 = require('rankRequirements/Scout2016');
-const ScoutRank2012 = require('rankRequirements/Scout2012');
-const TenderfootRank2016 = require('rankRequirements/Tenerfoot2016');
-const TenderfootRank2012 = require('rankRequirements/Tenderfoot2012');
-const SecondClassRank2016 = require('rankRequirements/SecondClass2016');
-const SecondClassRank2013 = require('rankRequirements/SecondClass2013');
-const FirstClassRank2016 = require('rankRequirements/FirstClass2016');
-const FirstClassRank2013 = require('rankRequirements/FirstClass2013');
-const StarRank2016 = require('rankRequirements/Star2016');
-const StarRank2013 = require('rankRequirements/Star2013');
-const LifeRank2016 = require('rankRequirements/Life2016');
-const LifeRank2013 = require('rankRequirements/Life2013');
-const EagleRank2016 = require('rankRequirements/Eagle2016');
+const ScoutRank2016 = require('./rankRequirements/Scout2016');
+const ScoutRank2012 = require('./rankRequirements/Scout2012');
+const TenderfootRank2016 = require('./rankRequirements/Tenerfoot2016');
+const TenderfootRank2012 = require('./rankRequirements/Tenderfoot2012');
+const SecondClassRank2016 = require('./rankRequirements/SecondClass2016');
+const SecondClassRank2013 = require('./rankRequirements/SecondClass2013');
+const FirstClassRank2016 = require('./rankRequirements/FirstClass2016');
+const FirstClassRank2013 = require('./rankRequirements/FirstClass2013');
+const StarRank2016 = require('./rankRequirements/Star2016');
+const StarRank2013 = require('./rankRequirements/Star2013');
+const LifeRank2016 = require('./rankRequirements/Life2016');
+const LifeRank2013 = require('./rankRequirements/Life2013');
+const EagleRank2016 = require('./rankRequirements/Eagle2016');
 
 class ScoutbookRankAdvancement {
     static rankMatrix = {
