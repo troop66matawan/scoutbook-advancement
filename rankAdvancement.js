@@ -25,11 +25,11 @@ class ScoutbookRankAdvancement {
             "2016" : new TenderfootRank2016(),
         },
         "Second Class": {
-            "2012" : new SecondClassRank2013(),
+            "2013" : new SecondClassRank2013(),
             "2016" : new SecondClassRank2016(),
         },
         "First Class" : {
-            "2012" : new FirstClassRank2013(),
+            "2013" : new FirstClassRank2013(),
             "2016" : new FirstClassRank2016(),
         },
         "Star Scout": {
