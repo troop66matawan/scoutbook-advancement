@@ -8,7 +8,7 @@ class ScoutbookAuditMark {
     }
 
     set markedBy(value) {
-        if (value instanceof String) {
+        if (value) {
             this._markedBy = value;
         }
     }
