@@ -1,13 +1,14 @@
 "use strict";
 
 class ScoutbookAuditMark {
+
     constructor(who,when) {
         this.markedBy = who;
         this.markedDate = when;
     }
 
     set markedBy(value) {
-        if (value instanceof Date) {
+        if (value instanceof String) {
             this._markedBy = value;
         }
     }
@@ -16,7 +17,9 @@ class ScoutbookAuditMark {
     }
 
     set markedDate(value) {
-        this._markedDate = value !== undefined ? value : '';
+        if (value instanceof Date) {
+            this._markedDate = value;
+        }
     }
     get markedDate() {
         return this._markedDate;
