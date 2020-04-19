@@ -14,6 +14,8 @@ const LifeRank2016 = require('./rankRequirements/Life2016');
 const LifeRank2013 = require('./rankRequirements/Life2013');
 const EagleRank2016 = require('./rankRequirements/Eagle2016');
 
+const ScoutbookAuditMark = require('./auditMark');
+
 class ScoutbookRankAdvancement {
     static rankMatrix = {
         "Scout" : {
@@ -55,6 +57,8 @@ class ScoutbookRankAdvancement {
             throw new Error('Unsupported Rank (' + rank + ') and Version ('+version+').');
         }
         this.completionDate = undefined;
+        this.isApproved = false;
+        this.isAwarded = false;
     }
 
     set rank(value) {
@@ -84,7 +88,51 @@ class ScoutbookRankAdvancement {
         return this._completionDate;
     }
     set completionDate(value) {
-        this._completionDate = value;
+        if (value instanceof Date) {
+            this._completionDate = value;
+        }
+    }
+
+    get markedCompleted() {
+        return this._markedCompleted;
+    }
+    set markedCompleted(value) {
+        if (value instanceof  ScoutbookAuditMark) {
+            this._markedCompleted = value;
+        }
+    }
+    
+    get isApproved() {
+        return this._isApproved;
+    }
+    set isApproved(value) {
+        if (value === true || value === false) {
+            this._isApproved = value;
+        }
+    }
+    get markedApproved() {
+        return this._markedApproved;
+    }
+    set markedApproved(value) {
+        if (value instanceof  ScoutbookAuditMark) {
+            this._markedApproved = value;
+        }
+    }
+    get isAwarded() {
+        return this._isAwarded;
+    }
+    set isAwarded(value) {
+        if (value === true || value === false) {
+            this._isAwarded = value;
+        }
+    }
+    get markedAwarded() {
+        return this._markedAwarded;
+    }
+    set markedAwarded(value) {
+        if (value instanceof  ScoutbookAuditMark) {
+            this._markedAwarded = value;
+        }
     }
 
 }
