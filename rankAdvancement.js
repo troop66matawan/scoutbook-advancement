@@ -14,9 +14,9 @@ const LifeRank2016 = require('./rankRequirements/Life2016');
 const LifeRank2013 = require('./rankRequirements/Life2013');
 const EagleRank2016 = require('./rankRequirements/Eagle2016');
 
-const ScoutbookAuditMark = require('./auditMark');
+const ScoutbookBaseAdvancement = require('./baseAdvancement');
 
-class ScoutbookRankAdvancement {
+class ScoutbookRankAdvancement extends ScoutbookBaseAdvancement {
     static rankMatrix = {
         "Scout" : {
             "2012" : new ScoutRank2012(),
@@ -48,33 +48,21 @@ class ScoutbookRankAdvancement {
         }
     };
     constructor(rank, version) {
-        this.rank = rank;
-        this.version = version;
+        super(rank, version);
         this.requirements = undefined;
         if (ScoutbookRankAdvancement.rankMatrix[rank] && ScoutbookRankAdvancement.rankMatrix[rank][version+'']) {
             this.requirements = ScoutbookRankAdvancement.rankMatrix[rank][version+''];
         } else {
             throw new Error('Unsupported Rank (' + rank + ') and Version ('+version+').');
         }
-        this.completionDate = undefined;
-        this.isApproved = false;
-        this.isAwarded = false;
     }
 
     set rank(value) {
-        this._rank = value !== undefined ? value : '';
+        this._type = value !== undefined ? value : '';
     }
 
     get rank() {
-        return this._rank;
-    }
-
-    set version(value) {
-        this._version = value !== undefined ? value : '';
-    }
-
-    get version() {
-        return this._version;
+        return this._type;
     }
 
     get requirements() {
@@ -82,57 +70,6 @@ class ScoutbookRankAdvancement {
     }
     set requirements(value) {
         this._requirements = value;
-    }
-
-    get completionDate() {
-        return this._completionDate;
-    }
-    set completionDate(value) {
-        if (value instanceof Date) {
-            this._completionDate = value;
-        }
-    }
-
-    get markedCompleted() {
-        return this._markedCompleted;
-    }
-    set markedCompleted(value) {
-        if (value instanceof  ScoutbookAuditMark) {
-            this._markedCompleted = value;
-        }
-    }
-    
-    get isApproved() {
-        return this._isApproved;
-    }
-    set isApproved(value) {
-        if (value === true || value === false) {
-            this._isApproved = value;
-        }
-    }
-    get markedApproved() {
-        return this._markedApproved;
-    }
-    set markedApproved(value) {
-        if (value instanceof  ScoutbookAuditMark) {
-            this._markedApproved = value;
-        }
-    }
-    get isAwarded() {
-        return this._isAwarded;
-    }
-    set isAwarded(value) {
-        if (value === true || value === false) {
-            this._isAwarded = value;
-        }
-    }
-    get markedAwarded() {
-        return this._markedAwarded;
-    }
-    set markedAwarded(value) {
-        if (value instanceof  ScoutbookAuditMark) {
-            this._markedAwarded = value;
-        }
     }
 
 }
