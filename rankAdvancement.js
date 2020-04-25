@@ -19,39 +19,39 @@ const ScoutbookBaseAdvancement = require('./baseAdvancement');
 class ScoutbookRankAdvancement extends ScoutbookBaseAdvancement {
     static rankMatrix = {
         "Scout" : {
-            "2012" : new ScoutRank2012(),
-            "2016" : new ScoutRank2016(),
+            "2012" : ScoutRank2012,
+            "2016" : ScoutRank2016,
         },
         "Tenderfoot": {
-            "2012" : new TenderfootRank2012(),
-            "2016" : new TenderfootRank2016(),
+            "2012" : TenderfootRank2012,
+            "2016" : TenderfootRank2016,
         },
         "Second Class": {
-            "2013" : new SecondClassRank2013(),
-            "2016" : new SecondClassRank2016(),
+            "2013" : SecondClassRank2013,
+            "2016" : SecondClassRank2016,
         },
         "First Class" : {
-            "2013" : new FirstClassRank2013(),
-            "2016" : new FirstClassRank2016(),
+            "2013" : FirstClassRank2013,
+            "2016" : FirstClassRank2016,
         },
         "Star Scout": {
-            "2013" : new StarRank2013(),
-            "2016" : new StarRank2016(),
+            "2013" : StarRank2013,
+            "2016" : StarRank2016,
         },
         "Life Scout": {
-            "2013" : new LifeRank2013(),
-            "2016" : new LifeRank2016(),
+            "2013" : LifeRank2013,
+            "2016" : LifeRank2016,
         },
         "Eagle Scout": {
-            "2014" : new EagleRank2016(), // there are no real Eagle 2014s, just version error.
-            "2016" : new EagleRank2016(),
+            "2014" : EagleRank2016, // there are no real Eagle 2014s, just version error.
+            "2016" : EagleRank2016,
         }
     };
     constructor(rank, version) {
         super(rank, version);
         this.requirements = undefined;
         if (ScoutbookRankAdvancement.rankMatrix[rank] && ScoutbookRankAdvancement.rankMatrix[rank][version+'']) {
-            this.requirements = ScoutbookRankAdvancement.rankMatrix[rank][version+''];
+            this.requirements = new ScoutbookRankAdvancement.rankMatrix[rank][version+'']();
         } else {
             throw new Error('Unsupported Rank (' + rank + ') and Version ('+version+').');
         }
