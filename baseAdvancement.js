@@ -4,6 +4,9 @@ const ScoutbookAuditMark = require('./auditMark');
 class ScoutbookBaseAdvancement {
 
     constructor(type, version) {
+        if (this.constructor === ScoutbookBaseAdvancement) {
+            throw new Error('ScoutbookBaseAdvancement can\'t be instantiated');
+        }
         this.type = type;
         this.version = version;
         this.completionDate = undefined;
