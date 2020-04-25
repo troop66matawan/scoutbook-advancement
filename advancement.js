@@ -1,5 +1,6 @@
 "use strict";
 const ScoutbookRankAdvancement = require('./rankAdvancement');
+const ScoutbookMeritBadgeAdvancement = require('./meritBadgeAdvancement');
 
 class ScoutbookAdvancement {
     static supportedRanks = [
@@ -12,6 +13,7 @@ class ScoutbookAdvancement {
         'Eagle Scout',
     ];
     constructor() {
+        this._meritBadges = {};
     }
     set Scout(value){
         if (value instanceof ScoutbookRankAdvancement && value.rank === 'Scout') {
@@ -71,6 +73,15 @@ class ScoutbookAdvancement {
         return this.eagleScout;
     }
 
+    get meritBadges() {
+        return this._meritBadges;
+    }
+    addMeritBadge(value) {
+        if (value instanceof ScoutbookMeritBadgeAdvancement) {
+            const mbName = value.meritBadge;
+            this.meritBadges[mbName]  = value;
+        }
+    }
 }
 
 module.exports = ScoutbookAdvancement;
