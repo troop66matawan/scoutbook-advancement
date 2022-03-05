@@ -13,6 +13,7 @@ const StarRank2013 = require('./rankRequirements/Star2013');
 const LifeRank2016 = require('./rankRequirements/Life2016');
 const LifeRank2013 = require('./rankRequirements/Life2013');
 const EagleRank2016 = require('./rankRequirements/Eagle2016');
+const EagleRank2022 = require('./rankRequirements/Eagle2022');
 
 const ScoutbookBaseAdvancement = require('./baseAdvancement');
 
@@ -45,6 +46,7 @@ class ScoutbookRankAdvancement extends ScoutbookBaseAdvancement {
         "Eagle Scout": {
             "2014" : EagleRank2016, // there are no real Eagle 2014s, just version error.
             "2016" : EagleRank2016,
+            "2022" : EagleRank2022
         }
     };
     constructor(rank, version) {
