@@ -2,12 +2,17 @@
 
 const ScoutRank2016 = require('./rankRequirements/Scout2016');
 const ScoutRank2012 = require('./rankRequirements/Scout2012');
+const ScoutRank2022 = require('./rankRequirements/Scout2022');
 const TenderfootRank2016 = require('./rankRequirements/Tenerfoot2016');
 const TenderfootRank2012 = require('./rankRequirements/Tenderfoot2012');
+const TenderfootRank2022 = require('./rankRequirements/Tenderfoot2022');
+const SecondClassRank2022 = require('./rankRequirements/SecondClass2022');
 const SecondClassRank2016 = require('./rankRequirements/SecondClass2016');
 const SecondClassRank2013 = require('./rankRequirements/SecondClass2013');
+const FirstClassRank2022 = require('./rankRequirements/FirstClass2022');
 const FirstClassRank2016 = require('./rankRequirements/FirstClass2016');
 const FirstClassRank2013 = require('./rankRequirements/FirstClass2013');
+const StarRank2022 = require('./rankRequirements/Star2022');
 const StarRank2016 = require('./rankRequirements/Star2016');
 const StarRank2013 = require('./rankRequirements/Star2013');
 const LifeRank2016 = require('./rankRequirements/Life2016');
@@ -22,22 +27,27 @@ class ScoutbookRankAdvancement extends ScoutbookBaseAdvancement {
         "Scout" : {
             "2012" : ScoutRank2012,
             "2016" : ScoutRank2016,
+            "2022" : ScoutRank2022,
         },
         "Tenderfoot": {
             "2012" : TenderfootRank2012,
             "2016" : TenderfootRank2016,
+            "2022" : TenderfootRank2022,
         },
         "Second Class": {
             "2013" : SecondClassRank2013,
             "2016" : SecondClassRank2016,
+            "2022" : SecondClassRank2022,
         },
         "First Class" : {
             "2013" : FirstClassRank2013,
             "2016" : FirstClassRank2016,
+            "2022" : FirstClassRank2022,
         },
         "Star Scout": {
             "2013" : StarRank2013,
             "2016" : StarRank2016,
+            "2022" : StarRank2022,
         },
         "Life Scout": {
             "2013" : LifeRank2013,
