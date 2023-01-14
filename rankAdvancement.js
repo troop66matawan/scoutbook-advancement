@@ -36,6 +36,7 @@ class ScoutbookRankAdvancement extends ScoutbookBaseAdvancement {
         },
         "Second Class": {
             "2013" : SecondClassRank2013,
+            "2015" : SecondClassRank2016,
             "2016" : SecondClassRank2016,
             "2022" : SecondClassRank2022,
         },
