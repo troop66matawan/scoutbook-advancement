@@ -4,7 +4,7 @@ const ScoutbookRequirement = require('../requirement');
 
 class EagleRank2016 extends ScoutbookRankRequirement {
     constructor() {
-        super('Eagle Scout', 2022, EagleRank2016.buildRequirements());
+        super('Eagle Scout', 2022, EagleRank2022.buildRequirements());
     }
 
     static buildRequirements() {
