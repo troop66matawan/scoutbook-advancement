@@ -16,4 +16,4 @@ class EagleRank2026 extends ScoutbookRankRequirement {
         return requirements;
     };
 }
-module.exports = EagleRank2016;
+module.exports = EagleRank2026;
