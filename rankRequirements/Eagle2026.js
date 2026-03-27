@@ -3,7 +3,7 @@ const ScoutbookRankRequirement = require('../rankRequirement');
 const ScoutbookRequirement = require('../requirement');
 const EagleRank2022 = require('./Eagle2022');
 
-class EagleRank2016 extends ScoutbookRankRequirement {
+class EagleRank2026 extends ScoutbookRankRequirement {
     constructor() {
         super('Eagle Scout', 2026, EagleRank2026.buildRequirements());
     }
